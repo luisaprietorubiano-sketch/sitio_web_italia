@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+        <title>Bellezza Naturale</title>
+    </head>
+
+
+
+    <body>
+<header class="barra-superior">
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">
+☰
+</button>
+
+
+<div>
+        <h1 class="titulo-pagina">Bellezza Naturale</h1>
+        <h2 class="subtitulo">Naturalmente Italia</h2>
+
+</div>
+
+</header>
+
+    <nav class="menu-lateral" id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="cultura.html">Cultura</a>
+        <a href="gastronomia.html">Gastronomia</a>
+        <a href="naturaleza.html">Naturaleza</a>
+        <a href="destinos.html">Destinos</a>
+
+    </nav>
+
+   <main>
+
+        <p>Italia también tiene paisajes que parecen sacados de una postal. Hay costas con agua azul, colinas llenas de viñedos y caminos perfectos para caminar sin prisa. 
+            Es el lugar ideal para respirar aire fresco, ver atardeceres increíbles y desconectarse un poco del ruido del día a día.
+        </p>
+        
+<div class="slider">
+    <img class="slide" src="IMAGENES/Naturaleza/1N.jpg" alt="Paisaje de viñedos de Italia al amanecer">
+    <img class="slide" src="IMAGENES/Naturaleza/2N.jpg" alt="Costa Italianna con mar azul">
+    <img class="slide" src="IMAGENES/Naturaleza/3N.jpg" alt="viñedos con enfoque en las uvas">
+    <img class="slide" src="IMAGENES/Naturaleza/4N.jpg" alt="pueblos italianos, senderos y montañas">
+</div>
+
+
+<script>
+    let slides=document.querySelectorAll(".slide");
+    let index=0;
+
+    function cambiarImagen(){
+        slides.forEach((img) => {
+            img.style.opacity = 0;
+        });
+        slides[index].style.opacity=1;
+        index++;
+        if(index >=slides.length){
+            index = 0;
+        }
+    }
+
+    setInterval(cambiarImagen,3000);
+
+
+</script>
+
+           <script>
+        function toggleMenu(){
+            let menu = document.getElementById("menu");
+            if(menu.style.left === "0px"){
+                menu.style.left = "-220px";
+            }else{
+                menu.style.left = "0px";
+                
+            }
+        }
+    </script>
+
+    <div class="footer"></div>
+   </main>
+
+<div id="panel-info">
+    <p id="texto-panel"></p>
+</div>
+
+<div id="panel-info">
+    <p id="texto-panel"></p>
+</div>
+
+
+<script src="panel.js"></script>
+
+
+    </body>
+
+
+</html>
+

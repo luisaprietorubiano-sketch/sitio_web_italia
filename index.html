@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+<title>Italia - Dolce Vita</title>
+
+</head>
+
+
+<body class="inicio">
+
+<header>
+    <h1 class="logo">Italia - Dolce Vita</h1>
+
+  <nav aria-label="Menú principal">
+
+    
+    <ul class="menu">
+
+        <li><a href="cultura.html">Cultural</a></li>
+        <li><a href="gastronomia.html">Comida</a></li>        
+        <li><a href="naturaleza.html">Naturaleza</a></li>
+        <li><a href="destinos.html">Lugares</a></li>
+
+</ul>
+</nav>
+
+</header>
+
+
+<main>
+<section class="hero">
+
+<h2>Prepara las maletas, <br>nos vamos para Italia</h2>
+
+<p id="mensaje"></p>
+
+</section>
+
+
+</main>
+
+<script>
+
+let hora = new Date().getHours();
+let mensaje="";
+
+if (hora <12){
+    mensaje = "buongiorno";
+}
+else if(hora < 18){
+    mensaje = "buon pomeriggio";
+}
+else{
+    mensaje = "buona sera";
+}
+
+document.getElementById("mensaje").textContent = mensaje;
+
+</script>
+
+<div id="panel-info">
+    <p id="texto-panel"></p>
+</div>
+
+
+<script src="panel.js"></script>
+
+</body>
+
+
+</html>
+

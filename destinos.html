@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+        <title>Paesaggi</title>
+    </head>
+    
+
+        <body>
+<header class="barra-superior">
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">
+☰
+</button>
+
+
+        <h1 class="titulo-pagina">Paesaggi</h1>
+
+        </header>
+
+
+    <nav class="menu-lateral" id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="cultura.html">Cultura</a>
+        <a href="gastronomia.html">Gastronomia</a>
+        <a href="naturaleza.html">Naturaleza</a>
+        <a href="destinos.html">Destinos</a>
+
+    </nav>
+
+    <main>
+
+    <section class="destinos">
+        <h2 class="subtitulo">Imperdibles</h2>
+
+<div class="tarjetas">
+
+    <div class="tarjeta">
+        <img src="IMAGENES/Destinos/1D.jpg" alt="Colosseum en Roma">
+         <h3>Roma</h3>
+        <p>Historia y arquitectura en uno de los monumentos más famosos del mundo.</p>
+    </div>
+
+    <div class="tarjeta">
+        <img src="IMAGENES/Destinos/2D.jpg" alt="Canales de Venecia">
+        <h3>Venecia</h3>
+        <p>Paseos en góndola y paisajes únicos entre canales.</p>
+    </div>
+
+    <div class="tarjeta">
+        <img src="IMAGENES/Destinos/3D.jpg" alt="Paisajes de Toscana">
+        <h3>Toscana</h3>
+        <p>Viñedos, colinas y pueblos llenos de tradición.</p>
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+<script>
+
+        function toggleMenu(){
+            let menu = document.getElementById("menu");
+            if(menu.style.left === "0px"){
+                menu.style.left = "-220px";
+            }else{
+                menu.style.left = "0px";
+                
+            }
+        }
+    </script>
+
+
+<div id="panel-info">
+    <p id="texto-panel"></p>
+</div>
+
+<div id="panel-info">
+    <p id="texto-panel"></p>
+</div>
+
+
+<script src="panel.js"></script>
+
+    </body>
+
+   
+</html>
+

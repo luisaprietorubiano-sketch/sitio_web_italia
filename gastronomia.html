@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilos.css">
+        <title>Buon Appetito</title>
+    </head>
+
+
+
+    <body>
+<header class="barra-superior">
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">
+☰
+</button>
+
+    <div>
+        <h1 class="titulo-pagina">Buon Appetito</h1>
+        <h2 class="subtitulo">Viaje culinario</h2>
+</div> 
+</header>
+
+    <nav class="menu-lateral" id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="cultura.html">Cultura</a>
+        <a href="gastronomia.html">Gastronomia</a>
+        <a href="naturaleza.html">Naturaleza</a>
+        <a href="destinos.html">Destinos</a>
+
+    </nav>
+    
+   <main>
+
+
+        <p>Viajar por Italia también es viajar con el estómago. Cada región tiene sus propios sabores: pizzas recién salidas del horno, pastas hechas a mano, helados cremosos y cafés que invitan a quedarse un rato más. 
+            Aquí comer no es solo alimentarse, es parte de la experiencia. La idea es simple: probar, disfrutar y repetir.
+
+        </p>
+
+<div class="slider">
+    <img class="slide" src="IMAGENES/Gastronomía/1G.jpg" alt="vinos">
+    <img class="slide" src="IMAGENES/Gastronomía/2G.jpg" alt="pan con quezo y especias">
+    <img class="slide" src="IMAGENES/Gastronomía/3G.jpg" alt="cortes de quesos">
+    <img class="slide" src="IMAGENES/Gastronomía/6G.jpg" alt="pizza y tomates">
+</div>
+
+</section>
+
+
+<footer class="footer"></footer>
+
+
+<script>
+    let slides=document.querySelectorAll(".slide");
+    let index=0;
+
+    function cambiarImagen(){
+        slides.forEach((img) => {
+            img.style.opacity = 0;
+        });
+        slides[index].style.opacity=1;
+        index++;
+        if(index >=slides.length){
+            index = 0;
+        }
+    }
+
+    setInterval(cambiarImagen,3000);
+
+
+</script>
+
+           <script>
+        function toggleMenu(){
+            let menu = document.getElementById("menu");
+            if(menu.style.left === "0px"){
+                menu.style.left = "-220px";
+            }else{
+                menu.style.left = "0px";
+                
+            }
+        }
+    </script>
+
+       </main>
+
+
+       <div id="panel-info">
+    <p id="texto-panel"></p>
+</div>
+
+<div id="panel-info">
+    <p id="texto-panel"></p>
+</div>
+
+
+<script src="panel.js"></script>
+
+    </body>
+
+</html>
+
+

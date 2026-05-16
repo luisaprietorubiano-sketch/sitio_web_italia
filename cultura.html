@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+        <title>Ciao</title>
+    </head>
+
+
+
+    <body>
+<header class="barra-superior">
+    
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">
+☰
+</button>
+
+
+    <div class="contenedor-titulos">
+        <h1 class="titulo-pagina">Ciao</h1>
+        <h2 class="subtitulo">Conoce esta joya</h2>    
+</div>
+
+</header>
+
+    <nav class="menu-lateral" id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="cultura.html">Cultura</a>
+        <a href="gastronomia.html">Gastronomia</a>
+        <a href="naturaleza.html">Naturaleza</a>
+        <a href="destinos.html">Destinos</a>
+
+    </nav>
+
+<main>
+
+        <p>Italia no solo se visita, se vive. En cada ciudad hay música en las plazas, artistas pintando en la calle y mercados llenos de vida. Caminar por sus barrios es encontrarse con tradiciones, festivales y pequeños detalles que cuentan historias. Lo mejor es perderse un poco, mirar alrededor y dejar que la cultura italiana sorprenda a cada paso.
+</p>
+<div class="slider">
+    <img class="slide" src="IMAGENES/Cultural/2C.jpg" alt="Canal de venecia con veleros">
+    <img class="slide" src="IMAGENES/Cultural/3C.jpg" alt="fuente Fontana di Trevi"> 
+    <img class="slide" src="IMAGENES/Cultural/4C.jpg" alt="pueblo de Vernazza">
+    <img class="slide" src="IMAGENES/Cultural/5C.jpg" alt="Museo">
+</div>
+
+<nav aria-label="Menú principal">
+
+<script>
+    let slides=document.querySelectorAll(".slide");
+    let index=0;
+
+    function cambiarImagen(){
+        slides.forEach((img) => {
+            img.style.opacity = 0;
+        });
+        slides[index].style.opacity=1;
+        index++;
+        if(index >=slides.length){
+            index = 0;
+        }
+    }
+
+    setInterval(cambiarImagen,3000);
+
+
+</script>
+
+           <script>
+        function toggleMenu(){
+            let menu = document.getElementById("menu");
+            if(menu.style.left === "0px"){
+                menu.style.left = "-220px";
+            }else{
+                menu.style.left = "0px";
+                
+            }
+        }
+    </script>
+
+
+    </main>
+
+<div id="panel-info">
+    <p id="texto-panel"></p>
+</div>
+
+<div id="panel-info">
+    <p id="texto-panel"></p>
+</div>
+
+
+<script src="panel.js"></script>
+
+    </body>
+
+</html>
+
+
